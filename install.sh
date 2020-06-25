@@ -38,6 +38,7 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   allpackage
 else
   echo "$(tput setaf 3)Attention! $(tput setab 7)Your system is not compatible with this installer. Use an amd64 system for this.$(tput sgr 0)"
+  xmessage "Your system is not compatible with this program." -center
 fi
 #while true; do
 #read -rsn1 chrome
