@@ -1,8 +1,7 @@
 if [ "$(id -u)" != "0" ]; then
   exec sudo "sh" "install.sh"
 fi
-sh startup.sh
-allpackage ()
+allpackageamd ()
 {
 	#chrome install
 	cd /lib/linstall86/bin
@@ -33,8 +32,13 @@ allpackage ()
 	apt install vi
 	echo "Also installed nano and vi. yk, jic."
 }
-allpackage
-shutdown -r now
+MACHINE_TYPE=`uname -m`
+if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+  sh startup.sh
+  allpackage
+else
+  echo "$(tput setaf 3)Attention! $(tput setab 7)Your system is not compatible with this installer. Use an amd64 system for this.$(tput sgr 0)"
+fi
 #while true; do
 #read -rsn1 chrome
 #if [ "$chrome" = "yn"]
