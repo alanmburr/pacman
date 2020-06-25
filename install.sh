@@ -11,8 +11,7 @@ allpackage ()
 	google-chrome
 	#VLC install
 	cd /lib/linstall86/bin
-	wget http://archive.ubuntu.com/ubuntu/pool/universe/v/vlc/vlc_3.0.11-1_amd64.deb
-	apt install vlc_3.0.11-1_amd64.deb
+	snap install vlc
 	#VS code & nanoinstall
 	cd /lib/linstall86/bin
 	apt install software-properties-common apt-transport-https wget
@@ -22,6 +21,7 @@ allpackage ()
 	apt install code
 	apt install nano
 	apt install vi
+	echo "Also installed nano and vi. yk, jic."
 }
 allpackage
 shutdown -r now
