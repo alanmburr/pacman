@@ -31,6 +31,10 @@ allpackageamd ()
 	rm -r /var/lib/dpkg/lock-frontend
 	apt install vi
 	echo "Also installed nano and vi. yk, jic."
+	xmessage "Install complete!" -center
+	clear
+	echo "$(tput setaf 3)Attention! $(tput setab 7)Install complete. Closing the Terminal.$(tput sgr 0)"
+	exit
 }
 MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
