@@ -7,6 +7,7 @@ mkdir /lib/linstall86
 cp install.sh /lib/lnstall86/install.sh
 cp startup.sh /lib/linstll86/startup.sh
 cd /lib/linstall86
+mkdir /lib/linstall86/bin
 #rm bin
 #echo "Removing 'bin' as it s already here."
 clear
