@@ -6,6 +6,8 @@ allpackageamd ()
 	#chrome install
 	cd /lib/linstall86/bin
 	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	rm -r /var/lib/dpkg/lock
+	rm -r /var/lib/dpkg/lock-frontend
 	apt install ./google-chrome-stable_current_amd64.deb
 	google-chrome
 	#VLC install
