@@ -37,7 +37,7 @@ allpackageamd ()
 	exit
 }
 MACHINE_TYPE=uname -m
-if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+if [ ${MACHINE_TYPE} = 'x86_64' ]; then
   sh startup.sh
   allpackage
 else
