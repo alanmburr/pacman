@@ -36,7 +36,7 @@ allpackageamd ()
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Install complete. Closing the Terminal.$(tput sgr 0)"
 	exit
 }
-MACHINE_TYPE=`uname -m`
+MACHINE_TYPE=uname -m
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   sh startup.sh
   allpackage
