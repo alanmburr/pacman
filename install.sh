@@ -36,10 +36,10 @@ allpackageamd ()
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Install complete. Closing the Terminal.$(tput sgr 0)"
 	exit
 }
-MACHINE_TYPE=uname -m
-if [ ${MACHINE_TYPE} === 'x86_64' ]; then
-  sh startup.sh
-  allpackage
+if [ `getconf LONG_BIT` = "64" ]
+then
+    sh startup.sh
+    allpackage
 else
   echo "$(tput setaf 3)Attention! $(tput setab 7)Your system is not compatible with this installer. Use an amd64 system for this.$(tput sgr 0)"
   xmessage "Your system is not compatible with this program." -center
