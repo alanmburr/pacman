@@ -1,13 +1,22 @@
 if [ "$(id -u)" != "0" ]; then
   exec sudo "sh" "install.sh"
 fi
+badfile ()
+{
+FILEA=/var/lib/dpkg/lock
+FIlEB=/var/lib/dpkg/lock-frontend
+if [ -f $FILEA -a -f $FILEB ]; then
+    rm -r /var/lib/dpkg/lock
+    rm -r /var/lib/dpkg/lock-frontend
+fi
+}
+
 allpackageamd ()
 {
 	#chrome install
 	cd /lib/linstall86/bin
 	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-	rm -r /var/lib/dpkg/lock
-	rm -r /var/lib/dpkg/lock-frontend
+	badfile
 	apt install ./google-chrome-stable_current_amd64.deb
 	google-chrome
 	#VLC install
@@ -15,24 +24,19 @@ allpackageamd ()
 	snap install vlc
 	#VS code & nanoinstall
 	cd /lib/linstall86/bin
-	rm -r /var/lib/dpkg/lock
-	rm -r /var/lib/dpkg/lock-frontend
+	badfile
 	apt install software-properties-common apt-transport-https wget
 	wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 	add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-	rm -r /var/lib/dpkg/lock
-	rm -r /var/lib/dpkg/lock-frontend
+	badfile
 	apt update
-	rm -r /var/lib/dpkg/lock
-	rm -r /var/lib/dpkg/lock-frontend
+	badfile
 	apt install code
-	rm -r /var/lib/dpkg/lock
-	rm -r /var/lib/dpkg/lock-frontend
+	badfile
 	apt install nano
-	rm -r /var/lib/dpkg/lock
-	rm -r /var/lib/dpkg/lock-frontend
+	badfile
 	apt install vi
-	echo "Also installed nano and vi. yk, jic."
+	echo "Also installed nano and vi."
 	xmessage "Install complete!" -center
 	clear
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Install complete. Closing the Terminal.$(tput sgr 0)"
