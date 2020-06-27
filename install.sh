@@ -36,13 +36,29 @@ allpackageamd ()
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Install complete. Closing the Terminal.$(tput sgr 0)"
 	exit
 }
+iarchpackages ()
+{
+	echo "$(tput setaf 3)Attention! $(tput setab 7)Chrome isn't compatible with architecture; Chromium, open source of Chrome will be installed.$(tput sgr 0)"
+	snap install chromium
+	echo "$(tput setaf 3)Attention! $(tput setab 7)VLC isn't compatible with your architecture; another video player, mpv, vill be installed.$(tput sgr 0)"
+	badfile
+	dpkg --configure -a
+	echo "Running dpkg to free up resources, and them rebuild them."
+	apt install mpv
+	echo "$(tput setaf 3)Attention! $(tput setab 7)Visual Studio Code isn't compatible with your architecture; another editor, Notepad++ will be installed.$(tput sgr 0)"
+	snap install notepad-plus-plus
+	xmessage "Install complete!" -center
+	clear
+	echo "$(tput setaf 3)Attention! $(tput setab 7)Install complete. Closing the Terminal.$(tput sgr 0)"
+}
 if [ `getconf LONG_BIT` = "64" ]
 then
     sh startup.sh
     allpackageamd
 else
-  echo "$(tput setaf 3)Attention! $(tput setab 7)Your system is not compatible with this installer. Use an amd64 system for this.$(tput sgr 0)"
-  xmessage "Your system is not compatible with this program." -center
+    sh startup.sh
+    echo "$(tput setaf 3)Attention! $(tput setab 7)Installing other packages, not preferred ones.$(tput sgr 0)"
+    iarchpackages
 fi
 #while true; do
 #read -rsn1 chrome
