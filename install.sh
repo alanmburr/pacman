@@ -25,13 +25,7 @@ allpackageamd ()
 	#VS code & nanoinstall
 	cd /lib/linstall86/bin
 	badfile
-	apt install software-properties-common apt-transport-https wget
-	wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-	add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-	badfile
-	apt update
-	badfile
-	apt install code
+	snap install code --classic
 	badfile
 	apt install nano
 	badfile
