@@ -8,6 +8,11 @@ FIlEB=/var/lib/dpkg/lock-frontend
 if [ -f $FILEA -a -f $FILEB ]; then
     rm -r /var/lib/dpkg/lock
     rm -r /var/lib/dpkg/lock-frontend
+    if [ `getconf LONG_BIT` = "64" ]; then
+    	dpkg --configure -a
+    else
+    #nothing
+    fi
 fi
 }
 
@@ -42,7 +47,6 @@ iarchpackages ()
 	snap install chromium
 	echo "$(tput setaf 3)Attention! $(tput setab 7)VLC isn't compatible with your architecture; another video player, mpv, vill be installed.$(tput sgr 0)"
 	badfile
-	dpkg --configure -a
 	echo "Running dpkg to free up resources, and them rebuild them."
 	apt install mpv
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Visual Studio Code isn't compatible with your architecture; another editor, Notepad++ will be installed.$(tput sgr 0)"
