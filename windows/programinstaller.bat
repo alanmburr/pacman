@@ -57,7 +57,5 @@ choco install libreoffice-still -y
 choco install adobereader -y
 choco install vscode -y
 choco install googlechrome -y
-$Output = $wshell.Popup("Install Finished. Your computer will restart soon. Be sure to boot into Windows.",0,"Software Installation",0+48)
-timeout /t 2000 /nobreak
-Restart-Computer
+rem $Output = $wshell.Popup("Install Finished. Your computer will restart soon. If you are dual booting, be sure to boot into Windows.",0,"Software Installation",0+48)
 exit
