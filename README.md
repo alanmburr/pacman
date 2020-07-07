@@ -18,6 +18,7 @@ cd pacman\windows && programinstaller.bat
 ## macOS
 If you don't have Homebrew and Git installed, start here. If you do, start at the 2nd code snippet.
 ```bash
+#/bin/bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install git
 ```
