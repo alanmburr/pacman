@@ -3,13 +3,15 @@
 If you don't have git installed, 
 [start here](https://github.com/wackyblackie/pacman/blob/master/ubuntu/README.md) If you do, start at the code snippet.
 ```bash
+#!/bin/bash
 git clone https://github.com/wackyblackie/pacman
 cd pacman/ubuntu && sh install.sh
 ```
 ## Windows
 If you don't have git installed, 
-[start here](https://github.com/wackyblackie/pacman/blob/master/windows/README.md). If you do, start at the code snippet.``` Open CMD by pressing Windows logo key + r and type "cmd.exe" and press enter.```
+[start here](https://github.com/wackyblackie/pacman/blob/master/windows/README.md). If you do, start at the code snippet.
 ```cmd
+#! C:\Windows\System32\cmd.exe
 git clone https://github.com/wackyblackie/pacman
 cd pacman\windows && programinstaller.bat
 ```
@@ -17,7 +19,7 @@ cd pacman\windows && programinstaller.bat
 If you don't have Homebrew and Git installed, 
 [start here](https://github.com/wackyblackie/pacman/blob/master/macos/README.md). If you do, start at the code snippet.
 ```bash
-#/bin/bash
+#!/bin/bash
 git clone https://github.com/wackyblackie/pacman
 cd pacman/macos && sh install.sh
 ```
