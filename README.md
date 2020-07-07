@@ -21,8 +21,8 @@ If you don't have Homebrew and Git installed, start here. If you do, start at th
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install git
 ```
-Use ```/bin/bash``` instead of ```bin/zsh```. Using ```ZSH``` will cause the installer to fail.
 ```bash
+#/bin/bash
 git clone https://github.com/wackyblackie/pacman
 cd pacman/macos && sh install.sh
 ```
