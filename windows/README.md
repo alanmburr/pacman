@@ -1,2 +1,2 @@
 ### Windows
-Follow directions here: https://github.com/wackyblackie/pacman. Read under the Windows section.
+Follow directions here: https://github.com/wackyblackie/pacman#windows. Read under the Windows section.
