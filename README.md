@@ -16,5 +16,14 @@ git clone https://github.com/wackyblackie/pacman
 cd pacman\windows && programinstaller.bat
 ```
 ## macOS
-Coming Soon!
+If you don't have Homebrew and Git installed, start here. If you do, start at the 2nd code snippet.
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew install git
+```
+Use ```/bin/bash``` instead of ```bin/zsh```. Using ```ZSH``` will cause the installer to fail.
+```bash
+git clone https://github.com/wackyblackie/pacman
+cd pacman/macos && sh install.sh
+```
 ### The name "Pacman" was inherited from Arch Linux.
