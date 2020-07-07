@@ -11,7 +11,7 @@ cd pacman/ubuntu && sh install.sh
 If you don't have git installed, 
 [start here](https://github.com/wackyblackie/pacman/blob/master/windows/README.md). If you do, start at the code snippet.
 ```cmd
-#! C:\Windows\System32\cmd.exe
+#!%systemdrive%\Windows\System32\cmd.exe
 git clone https://github.com/wackyblackie/pacman
 cd pacman\windows && programinstaller.bat
 ```
