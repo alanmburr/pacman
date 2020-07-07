@@ -6,7 +6,8 @@ git clone https://github.com/wackyblackie/pacman
 cd pacman/ubuntu && sh install.sh
 ```
 ## Windows
-If you don't have git installed, start at here. If you do, start at the code snippet. 
+If you don't have git installed, 
+[start here](https://github.com/wackyblackie/pacman/blob/master/windows/README.md). If you do, start at the code snippet. 
 [Download git here.](https://git-scm.com/download/win)
 Save and run the file. Finish setup before continuing. 
 Press ```Win+r```. 
@@ -16,12 +17,8 @@ git clone https://github.com/wackyblackie/pacman
 cd pacman\windows && programinstaller.bat
 ```
 ## macOS
-If you don't have Homebrew and Git installed, start here. If you do, start at the 2nd code snippet.
-```bash
-#/bin/bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install git
-```
+If you don't have Homebrew and Git installed, 
+[start here](https://github.com/wackyblackie/pacman/blob/master/macos/README.md). If you do, start at the code snippet.
 ```bash
 #/bin/bash
 git clone https://github.com/wackyblackie/pacman
