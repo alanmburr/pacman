@@ -5,6 +5,10 @@ path="/Library/minstall86"
 appfolder="/Applications"
 #echo $path + ", " + $appfolder
 echo "This has not been tested. It may be unstable."
+cd ..
+rm -r windows
+rm -r ubuntu
+cd macos
 allpackageamd ()
 {
 	#chrome install
