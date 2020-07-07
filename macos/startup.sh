@@ -1,13 +1,14 @@
 if [ "$(id -u)" != "0" ]; then
   exec sudo "sh" "startup.sh"
 fi
+path="/Library/minstall86"
 echo "Using mkdir to make a directory in '/Library'. The directory will be named 'minstall86'."
-mkdir /Library/minstall86
+mkdir $path
 #ls /Library/minstall86
-cp install.sh /Lib/lnstall86/install.sh
-cp startup.sh /Library/linstll86/startup.sh
-cd /Library/minstall86
-mkdir /Library/minstall86/bin
+cp install.sh $path/install.sh
+cp startup.sh $path/startup.sh
+cd $path
+mkdir $path/bin
 #rm bin
 #echo "Removing 'bin' as it s already here."
 clear
