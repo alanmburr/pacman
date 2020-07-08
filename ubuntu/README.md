@@ -1,2 +1,6 @@
-### Ubutnu
-Follow directions here: https://github.com/wackyblackie/pacman#ubuntu. Read under the Ubuntu section.
+### Ubuntu
+Git install
+```bash
+#!/bin/bash
+sudo apt-get install git
+```
