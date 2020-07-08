@@ -1,11 +1,12 @@
 if [ "$(id -u)" != "0" ]; then
   exec sudo "sh" "startup.sh"
 fi
-cd ..
+cd ../..
 rm -r windows
 rm -r mac
 echo "Using mkdir to make a directory in '/lib'. The directory will be named 'linstall86'."
-mkdir /lib/linstall86
+mkdir /lib/linstall86 
+cd linux/ubuntu
 cp install.sh /lib/lnstall86/install.sh
 cp startup.sh /lib/linstll86/startup.sh
 cd /lib/linstall86
