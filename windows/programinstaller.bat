@@ -33,19 +33,20 @@ $Output = $wshelll.Popup("The installer will now begin installing programs. Plea
 rem $Output = $wshell.Popup("Installing Google Chrome Stable for Windows",5,"Software Install",0+64)
 mkdir c:\"program files"\Winstall64
 cd ..
-rem /f macos
-rem /f ubuntu
-xcopy programinstaller.bat c:\"program files"\Winstall64\programinsteller.bat
+rmdir macos
+rmdir ubuntu
+rem xcopy programinstaller.bat c:\"program files"\Winstall64\programinsteller.bat
 rem $Output = $wshell.Popup("Installing Lego Mindstorms",0,"Software Installation",0+64)
 cd c:\"program files"\Winstall64
-start ./LMS-EV3_Full-setup_1.4.4_en-US_WIN32.exe
+cmd
+curl https://le-www-live-s.legocdn.com/downloads/LMS-EV3/LMS-EV3_Full-setup_1.4.4_en-US_WIN32.exe > LME-EV3_Full-setup_1.4.4_en-US_WIN32.exe
+start LME-EV3_Full-setup_1.4.4_en-US_WIN32.exe
+powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 cmd
 @echo off
 SET DIR=%~dp0%
-::download install.ps1
 %systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadFile('https://chocolatey.org/install.ps1','%DIR%install.ps1'))"
-::run installer
 %systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "& '%DIR%install.ps1' %*"
 powershell
 rem $Output = $wshell.Popup("Installing other software",0,"Software Installation",0+64)
