@@ -2,7 +2,7 @@
 - [Windows 8.1/10](#windows)
 - [macOS X 10.10 ➕](#macos)
 - [Ubuntu](#ubuntu)
-```- [Debian/Raspbian](#debian)```
+- [Debian/Raspbian](#debianraspbian)
 - [Fedora](#fedora)
 ## Linux
 ### Ubuntu
