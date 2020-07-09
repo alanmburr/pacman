@@ -34,7 +34,9 @@ allpackageamd ()
 	badfile
 	apt install vi -y
 	echo "Also installed nano and vi."
-	xmessage "Install complete!" -center
+	#xmessage "Install complete!" -center
+	#Thought to keep xmessage just in case.
+	zenity --info --text="Install Complete!"
 	clear
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Install complete. Closing the Terminal.$(tput sgr 0)"
 	exit
@@ -49,7 +51,8 @@ iarchpackages ()
 	apt install mpv -y
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Visual Studio Code isn't compatible with your architecture; another editor, Notepad++ will be installed.$(tput sgr 0)"
 	snap install notepad-plus-plus
-	xmessage "Install complete!" -center
+	#xmessage "Install complete!" -center
+	zenity --info --text="Install complete!"
 	clear
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Install complete. Closing the Terminal.$(tput sgr 0)"
 }
