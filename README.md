@@ -3,21 +3,28 @@
 - [macOS X 10.10 ➕](#macos)
 - [Ubuntu](#ubuntu)
 - [Debian/Raspbian](#debianraspbian)
-- [Fedora](#fedora)
+- [Fedora 22 ➕](#fedora)
 ## Linux
 ### Ubuntu
 If you don't have git installed, 
-[start here](https://github.com/wackyblackie/pacman/blob/master/ubuntu/README.md). If you do, start at the code snippet.
+[start here](https://github.com/wackyblackie/pacman/blob/master/linux/ubuntu/README.md). If you do, start at the code snippet.
 ```bash
 #!/bin/bash
 git clone https://github.com/wackyblackie/pacman
-cd pacman/ubuntu && sh install.sh
+cd pacman/linux/ubuntu && sh install.sh
 ```
 :heavy_check_mark: Tested and works! :heavy_check_mark:
-### Debian/Raspbian
-Coming soon!
-### Fedora
-Coming soon!
+### Debian-based ([see here](https://github.com/wackyblackie/pacman/blob/master/linux/debian/README.md) for compatibility)
+If you don't have git installed,
+[start here](https://github.com/wackyblackie/pacman/blob/master/linux/debian/README.md). If you do, start at the code snippet.
+```bash
+#!/bin/bash
+git clone https://github.com/wackyblackie/pacman
+cd pacman/linux/debian && sh install.sh
+```
+:warning: Not tested. :warning:
+### Fedora 22 :heavy_plus_sign:
+
 ## Windows
 ### Windows 8.1/10
 If you don't have git installed, 
