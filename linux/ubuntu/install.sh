@@ -10,8 +10,6 @@ if [ -f $FILEA -a -f $FILEB ]; then
     rm -r /var/lib/dpkg/lock-frontend
     if [ `getconf LONG_BIT` = "64" ]; then
     	dpkg --configure -a
-    else
-    #nothing
     fi
 fi
 }
