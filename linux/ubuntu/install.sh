@@ -13,14 +13,14 @@ if [ -f $FILEA -a -f $FILEB ]; then
     fi
 fi
 }
-
+export DISPLAY=:0
 allpackageamd ()
 {
 	#chrome install
 	cd /lib/linstall86/bin
-	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb > gcs.deb
 	badfile
-	apt install ./google-chrome-stable_current_amd64.deb
+	apt install gcs.deb -y
 	google-chrome
 	#VLC install
 	cd /lib/linstall86/bin
@@ -30,9 +30,9 @@ allpackageamd ()
 	badfile
 	snap install code --classic
 	badfile
-	apt install nano
+	apt install nano -y
 	badfile
-	apt install vi
+	apt install vi -y
 	echo "Also installed nano and vi."
 	xmessage "Install complete!" -center
 	clear
@@ -46,7 +46,7 @@ iarchpackages ()
 	echo "$(tput setaf 3)Attention! $(tput setab 7)VLC isn't compatible with your architecture; another video player, mpv, vill be installed.$(tput sgr 0)"
 	badfile
 	echo "Running dpkg to free up resources, and them rebuild them."
-	apt install mpv
+	apt install mpv -y
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Visual Studio Code isn't compatible with your architecture; another editor, Notepad++ will be installed.$(tput sgr 0)"
 	snap install notepad-plus-plus
 	xmessage "Install complete!" -center
