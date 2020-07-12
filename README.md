@@ -24,7 +24,15 @@ cd pacman/linux/debian && sh install.sh
 ```
 :warning: Not tested. :warning:
 ### Fedora 22 :heavy_plus_sign:
-
+Documentation coming soon!
+### Arch Linux
+If you don't have Git installed,
+[start here](https://github.com/wackyblackie/pacman/blob/master/linux/arch/README.md). If you do, start at the code snippet.
+```zsh
+#!/bin/zsh
+git clone https://github.com/wackyblackie/pacman
+cd pacman/linux/arch && install.sh
+```
 ## Windows
 ### Windows 8.1/10
 If you don't have git installed, 
