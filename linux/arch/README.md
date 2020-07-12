@@ -1,12 +1,12 @@
 ### Arch Linux
-An X Window System <b>must</b> be installed for this installer. It installs GUI programs and 2 terminal-based programs.
-Recommended
+An X Window System <b>must</b> be installed for this installer.
+Recommended:
 - [GNOME](https://wiki.archlinux.org/index.php/GNOME)
 - [Cinnamon](https://wiki.archlinux.org/index.php/Cinnamon)
-- [Budgie](https://wiki.archlinux.org/index.php/Budgie)
+- [KDE Plasma](https://wiki.archlinux.org/index.php/KDE#Plasma)
 <p>Git install</p>
 
-```bash
-#!/bin/bash
+```zsh
+#!/bin/zsh
 sudo pacman -Sy git
 ```
