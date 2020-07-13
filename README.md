@@ -1,12 +1,9 @@
 # Pacman for Linux, Windows, macOS
 - [Windows 8.1/10](#windows)
-- [macOS X 10.10 ➕](#macos)
-- [Ubuntu](#ubuntu)
-- [Debian-based](#debian-based-see-here-for-compatibility)
-- [Fedora 22 ➕](#fedora-22-heavy_plus_sign)
-- [Arch Linux](#arch-linux)
+- [macOS X 10.13 ➕](#macos)
+- [Linux: Debian-based, Fedora, Arch Linux](#linux)
 ## Linux
-### Ubuntu
+### Ubuntu 16.04 :heavy_plus_sign:
 If you don't have git installed, 
 [start here](https://github.com/wackyblackie/pacman/blob/master/linux/ubuntu/README.md). If you do, start at the code snippet.
 ```bash
@@ -23,7 +20,7 @@ If you don't have git installed,
 $ git clone https://github.com/wackyblackie/pacman
 $ cd pacman/linux/debian && sh install.sh
 ```
-:warning: Not tested. :warning:
+:heavy_check_mark: Tested and works! :heavy_check_mark:
 ### Fedora 22 :heavy_plus_sign:
 If you don't have git installed, [start here](https://git-scm.com/download/linux#fedora). If you do, start at the code snippet.
 ```bash
@@ -31,6 +28,7 @@ If you don't have git installed, [start here](https://git-scm.com/download/linux
 $ git clone https://github.com/wackyblackie/pacman
 $ cd pacman/linux/fedora && sh install.sh
 ```
+:heavy_check_mark: Tested and works! :heavy_check_mark:
 ### Arch Linux
 If you don't have Git installed,
 [start here](https://github.com/wackyblackie/pacman/blob/master/linux/arch/README.md). If you do, start at the code snippet.
@@ -39,6 +37,7 @@ If you don't have Git installed,
 $ git clone https://github.com/wackyblackie/pacman
 $ cd pacman/linux/arch && sh install.sh
 ```
+:heavy_check_mark: Tested and works! :heavy_check_mark:
 ## Windows
 ### Windows 8.1/10
 If you don't have git installed, 
@@ -59,4 +58,4 @@ $ git clone https://github.com/wackyblackie/pacman
 $ cd pacman/macos && sh install.sh
 ```
 :warning: Warning! This has not been tested on macOS and it might not work. :warning:
-#### The name "Pacman" was inherited from Arch Linux.
+##### The name "Pacman" was inherited from Arch Linux.
