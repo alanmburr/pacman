@@ -1,17 +1,17 @@
-if [ "$(id -u)" != "0" ]; then
-  exec sudo "sh" "install.sh"
-fi
+sudo pacman -Sy
 aur="https://aur.archlinux.org/"
 allpackageamd ()
 {
 	#chrome install
-	pacman -S chromium
+	sudo pacman -S chromium
 	#VLC install
-	pacman -S vlc
+	sudo pacman -S vlc
 	#VS code & nanoinstall
 	git clone $aur/visual-studio-code-bin.git
-  cd visual-studio-code-bin
-  makepkg -si
+  	cd visual-studio-code-bin
+  	makepkg -si
+	sudo pacman -S nano
+	sudo pacman -S vi
 	echo "Also installed nano and vi."
 	zenity --info --text="Install complete!"
 	clear
