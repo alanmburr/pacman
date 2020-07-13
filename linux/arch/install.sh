@@ -3,15 +3,16 @@ aur="https://aur.archlinux.org/"
 allpackageamd ()
 {
 	#chrome install
-	sudo pacman -S chromium
+	yes | sudo pacman -S chromium
+	yes | sudo pacman -S firefox
 	#VLC install
-	sudo pacman -S vlc
+	yes | sudo pacman -S vlc
 	#VS code & nanoinstall
 	git clone $aur/visual-studio-code-bin.git
   	cd visual-studio-code-bin
   	makepkg -si
-	sudo pacman -S nano
-	sudo pacman -S vi
+	yes | sudo pacman -S nano
+	yes | sudo pacman -S vi
 	echo "Also installed nano and vi."
 	zenity --info --text="Install complete!"
 	clear
