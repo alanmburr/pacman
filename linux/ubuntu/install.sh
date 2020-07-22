@@ -1,6 +1,8 @@
 if [ "$(id -u)" != "0" ]; then
   exec sudo "sh" "install.sh"
 fi
+newubuntu ()
+{
 badfile ()
 {
 FILEA=/var/lib/dpkg/lock
@@ -65,6 +67,13 @@ else
     echo "$(tput setaf 3)Attention! $(tput setab 7)Installing other packages, not preferred ones.$(tput sgr 0)"
     iarchpackages
 fi
+}
+oldubuntu ()
+{
+echo "Your version of Ubuntu is outdated."
+zenity --info --text="Your version of Ubuntu is outdated."
+}
+if egrep -qo "16*|17*|18*|19*|20*|21*" /etc/os-release; then newubuntu; else oldubuntu; fi
 #while true; do
 #read -rsn1 chrome
 #if [ "$chrome" = "yn"]
