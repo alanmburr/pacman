@@ -20,9 +20,10 @@ allpackageamd ()
 {
 	#chrome install
 	cd /lib/linstall86/bin
-	curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb > gcs.deb
+	apt install curl -y
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 	badfile
-	apt install gcs.deb -y
+	apt install google-chrome-stable_current_amd64.deb -y
 	google-chrome
 	#VLC install
 	cd /lib/linstall86/bin
