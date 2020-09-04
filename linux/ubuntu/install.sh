@@ -23,7 +23,8 @@ allpackageamd ()
 	apt install curl -y
 	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 	badfile
-	apt install google-chrome-stable_current_amd64.deb -y
+	dkpg -i google-chrome-stable_current_amd64.deb -y
+	apt install -f
 	google-chrome
 	#VLC install
 	cd /lib/linstall86/bin
@@ -37,9 +38,11 @@ allpackageamd ()
 	badfile
 	apt install vi -y
 	echo "Also installed nano and vi."
-	#xmessage "Install complete!" -center
-	#Thought to keep xmessage just in case.
-	zenity --info --text="Install Complete!"
+	if [ ! -f /usr/bin/zenity]; then
+    	    xmessage "Install complete!" -center
+	else
+	    zenity --info --text="Install complete! Feel free to use your computer with your newly added software an updated software."
+	fi
 	clear
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Install complete. Closing the Terminal.$(tput sgr 0)"
 	exit
@@ -54,8 +57,11 @@ iarchpackages ()
 	apt install mpv -y
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Visual Studio Code isn't compatible with your architecture; another editor, Notepad++ will be installed.$(tput sgr 0)"
 	snap install notepad-plus-plus
-	#xmessage "Install complete!" -center
-	zenity --info --text="Install complete!"
+	if [ ! -f /usr/bin/zenity]; then
+    	    xmessage "Install complete!" -center
+	else
+	    zenity --info --text="Install complete! Feel free to use your computer with your newly added software an updated software."
+	fi
 	clear
 	echo "$(tput setaf 3)Attention! $(tput setab 7)Install complete. Closing the Terminal.$(tput sgr 0)"
 }
@@ -71,10 +77,10 @@ fi
 }
 oldubuntu ()
 {
-echo "Your version of Ubuntu is outdated."
-zenity --info --text="Your version of Ubuntu is outdated."
+echo "Your version of Ubuntu (`grep VERSION_ID`) is not supported. If this computer belongs to an organization, contact your system administrator for a Distrobution Upgrade."
+zenity --info --text="Your version of Ubuntu is not supported."
 }
-if egrep -qo "16*|17*|18*|19*|20*|21*" /etc/os-release; then newubuntu; else oldubuntu; fi
+if egrep -qo "16*|17*|18*|19*|20*|21*|22*" /etc/os-release; then newubuntu; else oldubuntu; fi
 #while true; do
 #read -rsn1 chrome
 #if [ "$chrome" = "yn"]
