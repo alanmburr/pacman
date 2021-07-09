@@ -55,7 +55,7 @@ rem xcopy programinstaller.bat c:\"program files"\Winstall64\programinsteller.ba
 rem $Output = $wshell.Popup("Installing Lego Mindstorms",0,"Software Installation",0+64)
 cd c:\"program files"\Winstall64
 cmd
-curl https://le-www-live-s.legocdn.com/downloads/LMS-EV3/LMS-EV3_Full-setup_1.4.4_en-US_WIN32.exe > LME-EV3_Full-setup_1.4.4_en-US_WIN32.exe
+curl https://le-www-live-s.legocdn.com/downloads/LME-EV3/LME-EV3_Full-setup_1.4.5_en-US_WIN32.exe > LME-EV3_Full-setup_1.4.4_en-US_WIN32.exe
 start LME-EV3_Full-setup_1.4.4_en-US_WIN32.exe
 powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
