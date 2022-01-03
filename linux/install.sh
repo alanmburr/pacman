@@ -1,5 +1,5 @@
 #!/usr/bin/env /usr/bin/bash
-#    Copyright (C) 2021 Alan Burr <alanburr25@gmail.com>
+#    Copyright (C) 2020-2022 Alan Burr <alanburr25@gmail.com>
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
