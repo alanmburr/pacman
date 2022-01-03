@@ -1,6 +1,6 @@
 @echo off
 
-rem    Copyright (C) 2021 Alan Burr <alanburr25@gmail.com>
+rem    Copyright (C) 2020-2022 Alan Burr <alanburr25@gmail.com>
     
 rem    This program is free software: you can redistribute it and/or modify
 rem    it under the terms of the GNU General Public License as published by
