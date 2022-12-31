@@ -80,7 +80,7 @@ oldubuntu ()
 echo "Your version of Ubuntu (`grep VERSION_ID`) is not supported. If this computer belongs to an organization, contact your system administrator for a Distrobution Upgrade."
 zenity --info --text="Your version of Ubuntu is not supported."
 }
-if egrep -qo "16*|17*|18*|19*|20*|21*|22*" /etc/os-release; then newubuntu; else oldubuntu; fi
+if egrep -qo "16*|17*|18*|19*|20*|21*|22*|23*" /etc/os-release; then newubuntu; else oldubuntu; fi
 #while true; do
 #read -rsn1 chrome
 #if [ "$chrome" = "yn"]
